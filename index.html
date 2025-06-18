@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple GitHub Website</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles can go here if needed, but Tailwind is used primarily */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        /* Basic styles for images for better responsiveness */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Removes extra space below images */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white p-4 shadow-lg rounded-b-lg">
+        <div class="container flex justify-between items-center">
+            <h1 class="text-3xl font-bold">My Awesome Site</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-blue-200 transition duration-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-200 transition duration-300">About</a></li>
+                    <li><a href="#media" class="hover:text-blue-200 transition duration-300">Media</a></li>
+                    <li><a href="#contact" class="hover:text-blue-200 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container py-8">
+        <!-- Hero Section -->
+        <section class="bg-white p-8 mb-8 rounded-lg shadow-md text-center">
+            <h2 class="text-4xl font-extrabold text-blue-700 mb-4">Welcome to My Simple Website!</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                This is a basic website designed to be easily hosted on GitHub Pages.
+                You can customize this content, add your own media, and share it with the world.
+            </p>
+            <a href="#media" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                Explore Media
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white p-8 mb-8 rounded-lg shadow-md">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-4">About This Project</h3>
+            <p class="text-gray-600 leading-relaxed">
+                This website serves as a starting point for your online presence. It includes a responsive design
+                using Tailwind CSS, making it look good on various devices. The structure is clean and easy to
+                understand, perfect for beginners looking to host their content.
+            </p>
+            <p class="text-gray-600 leading-relaxed mt-4">
+                You can add more sections, integrate external scripts, or even connect to APIs to make it more dynamic.
+                Remember, the key is to keep your file structure organized, especially for your media files.
+            </p>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media" class="bg-white p-8 mb-8 rounded-lg shadow-md">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-6">Our Media Gallery</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Image 1 -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                    <!-- IMPORTANT: Replace 'images/placeholder-600x400.png' with your actual image paths -->
+                    <img src="https://placehold.co/600x400/FF5733/FFFFFF?text=Your+Image+1" alt="Placeholder Image 1" class="rounded-lg mb-4">
+                    <p class="text-gray-700 text-center">A beautiful landscape, soon to be replaced by your media!</p>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                    <!-- IMPORTANT: Replace 'images/another-media.jpg' with your actual image paths -->
+                    <img src="https://placehold.co/600x400/33FF57/FFFFFF?text=Your+Image+2" alt="Placeholder Image 2" class="rounded-lg mb-4">
+                    <p class="text-gray-700 text-center">More visual content coming soon.</p>
+                </div>
+
+                <!-- Image 3 (e.g., for a video thumbnail or another image) -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-sm">
+                    <!-- If you have a video, you'd use the <video> tag here, e.g.: -->
+                    <!-- <video controls src="images/your-video.mp4" class="rounded-lg mb-4"></video> -->
+                    <!-- For now, it's another image placeholder -->
+                    <img src="https://placehold.co/600x400/3357FF/FFFFFF?text=Your+Video+Thumbnail" alt="Placeholder Video Thumbnail" class="rounded-lg mb-4">
+                    <p class="text-gray-700 text-center">Imagine a video playing here!</p>
+                </div>
+
+                <!-- You can add more media items here following the same structure -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white p-8 rounded-lg shadow-md text-center">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-4">Get in Touch</h3>
+            <p class="text-gray-600 mb-6">
+                Feel free to reach out for any inquiries or feedback.
+            </p>
+            <form class="max-w-md mx-auto">
+                <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <textarea placeholder="Your Message" rows="5" class="w-full p-3 mb-6 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">
+                    Send Message
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white p-6 text-center rounded-t-lg mt-8">
+        <div class="container">
+            <p>&copy; 2025 My Simple Website. All rights reserved.</p>
+            <p class="text-sm mt-2">Built for GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script>
+        // You can add JavaScript interactivity here if needed.
+        // For a simple static site, this might be minimal.
+        // Example: Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
